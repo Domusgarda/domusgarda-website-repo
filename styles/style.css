@@ -1,0 +1,835 @@
+:root{
+    --font-1: Raleway, Sans-serif;
+    --font-size-1: 40px;
+    --font-size-2: 28px;
+    --font-size-3: 22px;
+    --font-size-4: 20px;
+    --font-size-5: 18px;
+    --font-size-6: 15px;
+    --color-1: #5161B4;
+    --color-2: #FF162C;
+    --color-3: #5BA723;
+    --color-4: #D2A77D;
+    --filter-color-1: brightness(0) saturate(100%) invert(38%) sepia(16%) saturate(1934%) hue-rotate(193deg) brightness(95%) contrast(90%);
+    --filter-color-2: brightness(0) saturate(100%) invert(29%) sepia(86%) saturate(7388%) hue-rotate(347deg) brightness(101%) contrast(101%);
+    --filter-color-3: brightness(0) saturate(100%) invert(53%) sepia(40%) saturate(779%) hue-rotate(51deg) brightness(96%) contrast(93%);
+    --filter-color-4: brightness(0) saturate(100%) invert(74%) sepia(43%) saturate(340%) hue-rotate(347deg) brightness(90%) contrast(82%);
+    --filter-color-5: brightness(0) saturate(100%) invert(98%) sepia(0%) saturate(77%) hue-rotate(176deg) brightness(80%) contrast(106%) drop-shadow(3px 4px 2px rgb(0 0 0 / 0.5));
+    --filter-color-6: brightness(0) saturate(100%) invert(98%) sepia(0%) saturate(77%) hue-rotate(176deg) brightness(80%) contrast(106%);
+    --box-shadow-1: 0px 10px 20px rgba(0 0 0 / 0.3);
+    --box-shadow-2: 0px 5px 5px rgba(0 0 0 / 0.3);
+    --white-gradient-01:linear-gradient(to right, rgb(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    --white-gradient-02:linear-gradient(to left,  rgba(255,255,255, 1) 0%,  rgba(255,255,255, 0) 100%);
+}
+
+
+/*------ MAINLAYOUTS CSS ------*/ 
+
+/*------ Header corrections ------*/
+
+.header-bar{
+    display: flex;
+    align-items: center;
+    height: 10vh;
+}
+
+.domus-logo{
+    width: 100px;
+    height: min-content;
+    margin-right: auto;
+    margin-left: 20px;
+    filter: var(--filter-color-1);
+}
+
+nav{
+    margin: auto;
+    margin-right: 0;
+    position: relative;
+}
+
+nav ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+.menu-bar{
+    display: flex;
+    align-items: center;
+}
+
+.menu-main{
+    font-family: var(--font-1);
+    font-size: var(--font-size-4);
+    font-weight: 1000;
+    display: flex;
+    align-items: center;
+}
+
+.menu-main li{
+    margin:auto;
+    margin-right: 50px;
+}
+
+.menu-main a{
+    color: var(--color-1);
+}
+.menu-main a:hover{
+    color: var(--color-2);
+}
+
+.menu-sub{
+    position: absolute;
+    display: none;
+    font-weight: 600;
+    z-index: 999;
+    padding-top: 10px;
+}
+
+.menu-sub ul{
+    background-color: white;
+    width: 100%;
+}
+
+.menu-sub li{
+    padding: 15px 20px;
+    margin: auto;
+}
+
+nav li:hover .menu-sub{
+    display: block;
+    z-index: 999;
+}
+
+.menu-main .booking-button {
+    color: white;
+    background-color: var(--color-2);
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.menu-main .booking-button:hover, .booking-button:hover {
+    color: white;
+    background-color: var(--color-1);
+}
+
+.lang-li{
+    display: flex;
+    align-items: center;
+}
+
+
+.lang-icon{
+    width: 30px;
+    height: 30px;
+    filter: var(--filter-color-1);
+}
+
+.lang-sub{
+    padding: 0;
+    margin: auto;
+    width: min-content;
+    margin-left: -17px;
+}
+
+
+/*------ Footer corrections ------*/
+footer{
+    font-family: var(--font-1);
+    width: 800px;
+    margin: auto;
+}
+
+footer h2{
+    font-weight: 1000;
+    color: #5161B4;
+}
+
+.upper-footer-content{
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo{
+    margin-right: 2em;
+    margin-left: 1em;
+}
+
+.footer-buttons{
+margin: auto;
+}
+
+.footer-icon{
+    width: 45px;  
+    margin-left: 20px;  
+    filter: var(--filter-color-3);
+}
+
+.footer-end{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1em;
+}
+
+/*--------GENERAL PART CSS--------*/
+body{
+    width: 100%;
+    margin: 0;
+}
+*{
+    font-family: var(--font-1);
+}
+
+h1{
+    font-weight: 900;
+}
+
+h2{
+    font-weight: 900;
+}
+
+h3{
+    font-weight: 700;
+}
+
+.flexed{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-width{
+width: 1000px;
+margin: auto;
+}
+
+.section-margins{
+    margin: 100px auto;
+}
+
+.section-text{
+    margin: auto 40px;
+}
+
+.section-image{
+    width: 50%;
+    height: 390px;
+    border-radius: 25px;
+    object-fit: cover;
+    box-shadow: var(--box-shadow-1);
+}
+
+.main-page-image{
+    height: 65vh;
+    width: 100%;
+    object-fit: cover;
+    object-position: center 70%;
+}
+.main-paragraph h1{
+    font-size: var(--font-size-1);
+    color: var(--color-1);
+    margin-bottom: 10px;
+}
+
+.main-paragraph h3{
+    font-size: var(--font-size-2);
+    color: var(--color-4);
+    margin-bottom: 30px;
+}
+
+.main-paragraph p{
+    font-size: var(--font-size-3);
+    text-align:justify;
+}
+
+.other-paragraph h2{
+    font-size: var(--font-size-2);
+    color: var(--color-3);
+    margin-bottom: 10px;
+}
+
+.other-paragraph h3{
+    font-size: var(--font-size-3);
+    color: var(--color-4);
+    margin-bottom: 30px;
+}
+.other-paragraph p{
+    font-size: var(--font-size-5);
+    text-align:justify;
+}
+
+.grid{
+    display: grid;
+}
+
+/*--------SPECIFIC PART CSS--------*/
+
+/*--------HOME PAGE CSS--------*/
+
+/*---Home Carousel CSS---*/
+.home-carousel{
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel{
+    position: relative;
+    height: 70vh;
+    width: 100%;
+    margin: 0 auto;
+    transition: transform 250ms ease-in;
+}
+
+.carousel-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    object-position: center 70%;
+}
+
+.carousel-button{
+    border: 0;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    height: 50%;
+    padding: 0;
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    filter:var(--filter-color-5);
+}
+
+.right-button{
+    right: 0;
+}
+
+/*---Booking Engine Widget CSS---*/
+.booking-engine-widget{
+    text-align: center;
+}
+
+
+/*---Domus Garda Paragraph CSS---*/
+.righted-text{
+    margin-left: 60px;
+    margin-right: 0;
+}
+
+.righted-text *{
+    margin: auto;
+}
+
+
+
+.intro-paragraph h1{
+    font-size: var(--font-size-1);
+    color: var(--color-1);
+    margin-bottom: 10px;
+}
+
+.intro-paragraph h3{
+    font-size: var(--font-size-2);
+    color: var(--color-4);
+    margin-bottom: 30px;
+}
+.intro-paragraph p{
+    font-size: var(--font-size-3);
+    text-align:justify;
+}
+
+/*---Houses Paragraph CSS---*/
+.lefted-text{
+    margin-left: 0;
+    margin-right: 60px;
+}
+
+.lefted-text *{
+    margin: auto;
+}
+
+.houses-paragraph h2{
+    font-size: var(--font-size-2);
+    color: var(--color-3);
+    margin-bottom: 10px;
+}
+
+.houses-paragraph h3{
+    font-size: var(--font-size-3);
+    color: var(--color-4);
+    margin-bottom: 30px;
+}
+.houses-paragraph p{
+    font-size: var(--font-size-5);
+    text-align:justify;
+}
+
+/*---Card Paragraph CSS---*/
+.card-paragraph h2{
+    color: var(--color-3);
+    font-size: var(--font-size-2);
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 75px;
+}
+
+.card-image{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 25px;
+    box-shadow: var(--box-shadow-1);
+}
+
+.domus-2-image{
+    border: 1px solid black;
+}
+
+.home-card{
+    width: 40%;
+    margin: auto 50px;
+}
+
+.home-card-info{
+    margin-left: 20px;
+}
+
+.home-card-info h4{
+    font-size: var(--font-size-4);
+    color: var(--color-4);
+    margin: 20px auto;
+}
+
+.home-card-info p{
+    font-size: var(--font-size-6);
+    margin-bottom: 10px;
+}
+
+.domus-garda-2 h4{
+    color: grey;
+}
+
+.apt-card-details{
+    display: flex;
+    width: 80%;
+    margin: 0;
+    font-weight: 500;
+    font-size: var(--font-size-6);
+}
+
+.apt-card-details p:nth-child(1)::after,
+.apt-card-details p:nth-child(2)::after{
+    content: '•';
+    margin: auto 15px;
+}
+
+.find-button{
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: white;
+    background-color: var(--color-2);
+}
+
+.domus-1-button,
+.domus-2-button{
+    float: right;
+}
+
+.domus-2-button{
+    background-color: grey;
+
+}
+
+/*---Host CSS---*/
+
+.home-fourth-section{
+    align-items: start;
+}
+
+.home-fourth-paragraph{
+    margin: 0 40px;
+}
+
+.host-paragraph *{
+    margin: auto;
+}
+
+.host-paragraph{
+    width: 40%;
+}
+
+.host-paragraph h2{
+    color: var(--color-3);
+    font-size: var(--font-size-2);
+    margin-bottom: 10px;
+}
+
+.host-paragraph h3{
+    color: var(--color-4);
+    font-size: var(--font-size-3);
+    margin-bottom: 30px;
+}
+
+.host-paragraph p{
+    font-size: var(--font-size-5);
+    margin-bottom: 75px;
+}
+
+.alex-vale{
+    width: 100%;
+    border-radius: 25px;
+    box-shadow: var(--box-shadow-1);
+}
+
+
+/*---Visit CSS---*/
+
+.visit-paragraph h2{
+    margin-top: auto;
+    margin-bottom: 10px;
+    color: var(--color-3);
+    font-size: var(--font-size-2);
+}
+
+.visit-paragraph h3{
+    margin-top: auto;
+    color: var(--color-4);
+    font-size: var(--font-size-3);
+    margin-bottom: 30px;
+}
+
+.visit-paragraph{
+    width: 40%;
+}
+
+.visit-image{
+    width:60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow-2);
+    margin-right: 10px;
+}
+
+.visit-dir-icon{
+    width:20px;
+}
+
+.visit-content{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+.visit-desc{
+    margin-left: 10px;
+}
+.visit-desc h4, .visit-desc p{
+    margin: auto;
+    font-size: var(--font-size-6);
+}
+.visit-desc h4{
+    margin-bottom: 5px;
+    color: var(--color-3);
+    font-weight: 800;
+}
+.visit-time{
+    display: flex;
+    width: max-content;
+}
+
+.visit-time p::before{
+ content:"•";   
+ margin-left: 10px;
+ margin-right: 10px;
+}
+
+.visit-slider{
+    width: 85%;
+    height: 425px;
+    margin: auto;
+    overflow-y: auto;
+    position: relative;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+}
+
+.visit-slider::-webkit-scrollbar{
+    width: 5px;
+}
+
+::-webkit-scrollbar-track{
+    background: #DDD;
+}
+::-webkit-scrollbar-thumb{
+    background: var(--color-4);
+}
+
+.visit-button{
+    display: flex;
+    width: min-content;
+    margin:auto;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+/*--------DOMUS GARDA 1 PAGE CSS--------*/
+
+/*---Services CSS---*/
+.services-apt-paragraph h2{
+    text-align: center;
+}
+
+.services-cards-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-items: center;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.service-card{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.service-card p{
+    font-size: var(--font-size-6);
+}
+
+.service-icon{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    float: left;
+    filter: var(--filter-color-4);
+}
+
+.no-pets-icon{
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+}
+
+/*---Apt Carousel CSS---*/
+.apt1-carousel{
+    position: relative;
+    overflow: hidden;
+    width: 1000px;
+    margin: auto;
+}
+
+.apt-carousel{
+    position: relative;
+    height: 600px;
+    width:80%;
+    margin: 0 auto;
+    transition: transform 250ms ease-in;
+    margin-bottom: 50px;
+}
+
+.apt-carousel-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    object-position: center 70%;
+    border-radius: 25px;
+    box-shadow: var(--box-shadow-1);
+}
+
+.apt-carousel-button{
+    border: 0;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    height: 50%;
+    padding: 0;
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    filter:var(--filter-color-6);
+}
+
+.right-button{
+    right: 0px;
+}
+/*--------VISIT PAGE CSS--------*/
+
+.visit-main-image{
+    object-position: center 50%;
+}
+
+.gradient-section{
+    position: relative;
+}
+.gradient-section:before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 10px;
+    content: "";
+    background: var(--white-gradient-01);
+    z-index: 999;
+}
+
+.gradient-section:after {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 10px;
+    content: "";
+    background: var(--white-gradient-02);
+}
+
+
+.destination-container h2{
+    color: var(--color-3);
+    margin-bottom: 50px;
+    margin-left: 16px;
+}
+
+.destination-slider{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 28%;
+    position: relative;
+    overflow-x: overlay;
+    scroll-snap-type: inline mandatory;
+    scroll-padding-inline: 16px;
+}
+
+.destination-slider::-webkit-scrollbar-track{
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.destination-slider > *{
+    scroll-snap-align: start;
+}
+
+
+.destination-image{
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: var(--box-shadow-1);
+}
+
+
+
+.destination-slider p{
+    margin-left: 5px;
+    color: black;
+}
+
+.destination-card{
+    margin: auto 16px;
+    margin-bottom: 30px;
+}
+
+.visit-veneto-section{
+    margin-top: 150px;
+}
+
+.visit-veneto-paragraph a img{
+    display: flex;
+    margin: auto;
+}
+
+.visit-veneto-text h2{
+    font-size: var(--font-size-2);
+    color: var(--color-3);
+}
+
+.visit-veneto-text h3{
+    font-size: var(--font-size-3);
+    margin-top: 10px;
+}
+
+.visit-veneto-text p{
+    font-size: var(--font-size-5);
+}
+
+.veneto-image{
+    width: 90%;
+}
+/*--------CONTACTS PAGE CSS--------*/
+
+/*---Contact Icons CSS---*/
+
+.page-title h1{
+    font-size: var(--font-size-1);
+    color: var(--color-1);
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.main-section-icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+    width: 100%;
+    margin-block: 50px;
+}
+
+.icon-card{
+    width: 30%;
+    display: block;
+    text-align: center;
+}
+
+.icon-card p{
+    font-size: var(--font-size-4);
+    text-align: center;
+    color: var(--color-4);
+    font-weight: 600;
+    margin: auto;
+}
+
+.icon-card p:nth-child(3){
+    font-size: var(--font-size-6);
+    margin-top: 5px;
+}
+
+.contact-icon{
+    width: 80px;
+    height: 80px;
+    filter: var(--filter-color-3);
+    margin-bottom: 20px;
+}
+
+.contact-map{
+    width: 100%;
+    height: 500px;
+    border: none;
+    border-radius: 25px;
+    box-shadow: var(--box-shadow-1);
+}
